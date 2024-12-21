@@ -8,8 +8,8 @@ public class DemoApplication {
 
     public static void main(String[] args) {
         var ctx = SpringApplication.run(DemoApplication.class, args);
-        MyNewClass myNewClass = ctx.getBean("myBean",MyNewClass.class);
-        System.out.println(myNewClass.sayHello());
+        Services services = ctx.getBean(Services.class);
+        System.out.println(services.tellAStory());
 
 
     }

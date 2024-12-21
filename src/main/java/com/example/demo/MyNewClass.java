@@ -6,7 +6,13 @@ import org.springframework.stereotype.Service;
 //@Component
 //@Service
 public class MyNewClass {
-    public String sayHello(){
-        return "Hello guys";
+    private String myVar;
+
+    public MyNewClass(String myVar) {
+        this.myVar = myVar;
+    }
+
+    public String sayHello() {
+        return "Hello guys, my vars = " + myVar;
     }
 }
